@@ -1,7 +1,7 @@
 ---- Arabic language strings
 
 local L = LANG.CreateLanguage("عربي")
--- By Allah this does not compute
+-- LANGUAGE UNSUPPORTED (BROKEN FONT)
 
 --- General text used in various places
 L.traitor    = "خائن"
