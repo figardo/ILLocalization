@@ -74,26 +74,18 @@ L.prev = "Previous"
 L.equip_title     = "Equipment"
 L.equip_tabtitle  = "Order Equipment"
 
-L.equip_status    = "Ordering status"
-L.equip_cost      = "You have {num} credit(s) remaining."
-L.equip_help_cost = "Every piece of equipment you buy costs 1 credit."
+L.equip_cost_out   = "You have no credits remaining."
 
-L.equip_help_carry = "You can only buy things for which you have room."
-L.equip_carry      = "You can carry this equipment."
 L.equip_carry_own  = "You are already carrying this item."
 L.equip_carry_slot = "You are already carrying a weapon in slot {slot}."
 
-L.equip_help_stock = "Of certain items you can only buy one per round."
 L.equip_stock_deny = "This item is no longer in stock."
-L.equip_stock_ok   = "This item is in stock."
-
-L.equip_custom     = "Custom item added by this server."
 
 L.equip_spec_name  = "Name"
 L.equip_spec_type  = "Type"
 L.equip_spec_desc  = "Description"
 
-L.equip_confirm    = "Buy equipment"
+L.equip_confirm    = "Buy"
 
 -- Disguiser tab in equipment menu
 L.disg_name      = "Disguiser"
@@ -151,23 +143,36 @@ L.intro_help     = "If you're new to the game, press F1 for instructions!"
 -- Radiocommands/quickchat
 L.quick_title   = "Quickchat keys"
 
-L.quick_yes     = "Yes."
-L.quick_no      = "No."
-L.quick_help    = "Help!"
-L.quick_imwith  = "I'm with {player}."
-L.quick_see     = "I see {player}."
-L.quick_suspect = "{player} acts suspicious."
-L.quick_traitor = "{player} is a Traitor!"
-L.quick_inno    = "{player} is innocent."
-L.quick_check   = "Anyone still alive?"
+L.quick_yes       = "Yes."
+L.quick_no        = "No."
+L.quick_help      = "Help!"
+
+L.quick_imwith    = "I'm with {player}."
+L.quick_imwith_n  = "I'm not with anybody."
+L.quick_imwith_d  = "I'm with someone in disguise!"
+
+L.quick_see       = "I see {player}."
+L.quick_see_n     = "I don't see anybody."
+L.quick_see_d     = "I see someone in disguise!"
+
+L.quick_suspect   = "{player} acts suspicious."
+L.quick_suspect_n = "Nobody is acting suspiciously."
+L.quick_suspect_d = "Someone in disguise is suspicious!"
+
+L.quick_traitor   = "{player} is a Traitor!"
+L.quick_traitor_n = "There's a Traitor around here!"
+L.quick_traitor_d = "Someone in disguise is a Traitor!"
+
+L.quick_inno      = "{player} is innocent."
+L.quick_inno_n    = "There are no innocents here."
+L.quick_inno_d    = "Someone in disguise is innocent?"
+
+L.quick_check     = "Anyone still alive?"
 
 -- {player} in the quickchat text normally becomes a player nickname, but can
 -- also be one of the below.  Keep these lowercase.
-L.quick_nobody    = "nobody"
-L.quick_disg      = "someone in disguise"
 L.quick_corpse    = "an unidentified body"
 L.quick_corpse_id = "{player}'s corpse"
-
 
 --- Body search window
 L.search_title  = "Body Search Results"
@@ -232,22 +237,38 @@ L.sb_tag_miss   = "MISSING"
 
 --- Help and settings menu (F1)
 
-L.help_title = "Help and Settings"
+L.help_title          = "Help and Settings"
 
 -- Tabs
-L.help_tut     = "Tutorial"
-L.help_tut_tip = "How TTT works, in 6 steps"
+L.help_tut            = "Tutorial"
+L.help_tut_tip        = "How TTT works, in 6 steps"
 
-L.help_settings = "TTT"
-L.help_settings_tip = "Gamemode specific settings"
+L.help_settings       = "Settings"
+L.help_settings_tip   = "Gamemode specific settings"
+
+L.menu_leaderboard    = "Leaderboard"
+
+L.menu_rules          = "Rules"
+
+L.menu_donate         = "Donate"
+
+L.menu_jukebox        = "Jukebox"
+
+L.help_dmglogs        = "Damagelogs"
+L.help_dmglogs_tip    = "Change the behaviour of the damagelogs menu."
+
+L.menu_sgroup         = "Steam Group"
+L.menu_discord        = "Discord"
+L.menu_forums         = "Forums"
+L.menu_youtube        = "YouTube"
 
 -- Settings
-L.set_title_gui = "Interface settings"
+L.set_title_gui       = "Interface"
 
-L.set_tips      = "Show gameplay tips at the bottom of the screen while spectating"
+L.set_tips            = "Show gameplay tips at the bottom of the screen while spectating"
 
-L.set_startpopup = "Start of round info popup duration"
-L.set_startpopup_tip = "When the round starts, a small popup appears at the bottom of your screen for a few seconds. Change the time it displays for here."
+L.set_startpopup      = "Start of round info popup duration"
+L.set_startpopup_tip  = "When the round starts, a small popup appears at the bottom of your screen for a few seconds. Change the time it displays for here."
 
 L.set_cross_opacity   = "Ironsight crosshair opacity"
 L.set_cross_disable   = "Disable crosshair completely"
@@ -261,20 +282,61 @@ L.set_lowsights       = "Lower weapon when using ironsights"
 L.set_lowsights_tip   = "Enable to position the weapon model lower on the screen while using ironsights. This will make it easier to see your target, but it will look less realistic."
 L.set_fastsw          = "Fast weapon switch"
 L.set_fastsw_tip      = "Enable to cycle through weapons without having to click again to use weapon. Enable show menu to show switcher menu."
-L.set_wswitch         = "Keep menu open with fast weapon switch"
+L.set_wswitch         = "Disable weapon switch menu auto-closing"
 L.set_wswitch_tip     = "By default the weapon switcher automatically closes a few seconds after you last scroll. Enable this to make it stay up."
 L.set_cues            = "Play sound cue when a round begins or ends"
 
+L.menus_weapon        = "Weapon"
+L.set_autoreload      = "Automatic Reload"
 
-L.set_title_play    = "Gameplay settings"
+L.menus_vmodel        = "Viewmodel"
+L.vm_right            = "Viewmodel Right"
+L.vm_forward          = "Viewmodel Forward"
+L.vm_up               = "Viewmodel Up"
+
+L.set_title_crosshair = "Crosshair"
+
+L.crosshair_style     = "Crosshair Style"
+L.set_crosshair       = "Enable Crosshair"
+L.crosshair_length    = "Crosshair Length"
+L.crosshair_thickness = "Crosshair Thickness"
+L.crosshair_gap       = "Crosshair Gap Scale"
+L.crosshair_dot       = "Show Center Dot"
+L.crosshair_shotgun   = "Use Shotgun Prongs"
+L.crosshair_equip     = "Use Equipment Prongs"
+L.crosshair_static    = "Static Crosshair"
+L.crosshair_firing    = "Dynamic Firing Crosshair"
+L.crosshair_clump     = "Use CW2-Style Clump Circle"
+L.clump_outline       = "Clump Circle Outline"
+L.clump_always        = "Clump Circle Always On"
+L.crosshair_clr       = "Crosshair Color"
+L.crosshair_outline   = "Outline Size"
+L.outline_clr         = "Outline Color"
+L.set_rolecrosshair   = "Enable role-based crosshair color"
+
+L.menus_scope         = "Sights"
+L.scope_sensmult      = "Sight Sensitivity Multiplier"
+L.scope_sensmag       = "Base scoped sensitivity on magnification?"
+L.set_cheapscopes     = "Cheap Scopes"
+L.cheapscopes_desc    = "A cheaper PIP scope implementation that is very low quality but saves a significant amount of performance. Scoped weapons will appear to clip into surfaces.\nWill reduce scope quality!"
+L.set_toggleads       = "Toggle Aim"
+L.scope_clr           = "Sight Color"
+
+L.set_title_play    = "Gameplay"
 
 L.set_specmode      = "Spectate-only mode (always stay spectator)"
 L.set_specmode_tip  = "Spectate-only mode will prevent you from respawning when a new round starts, instead you stay Spectator."
 L.set_mute          = "Mute living players when dead"
 L.set_mute_tip      = "Enable to mute living players while you are dead/spectator."
 
+L.set_updnotifs     = "Enable update notifications"
+L.set_rdmonrdm      = "Enable RDM Manager popups upon RDM"
+L.set_crlogs        = "Open the current round by default if you're alive and allowed to open the logs"
+L.set_pendingreps   = "Show the number of pending reports on the HUD"
+L.set_enablesound   = "Enable notification sound"
+L.set_outnotif      = "Enable notification sound outside of the game"
 
-L.set_title_lang    = "Language settings"
+L.set_title_lang    = "Language"
 
 -- It may be best to leave this next one english, so english players can always
 -- find the language setting even if it's set to a language they don't know.
@@ -576,7 +638,7 @@ L.tip19 = "As Detective, if you have leftover credits you could give a trusted I
 
 L.tip20 = "The Detectives' Binoculars allow long-range searching and identifying of corpses. Bad news if the Traitors were hoping to use a corpse as bait. Of course, while using the Binoculars a Detective is unarmed and distracted..."
 
-L.tip21 =  "The Detectives' Health Station lets wounded players recover. Of course, those wounded people could be Traitors..."
+L.tip21 = "The Detectives' Health Station lets wounded players recover. Of course, those wounded people could be Traitors..."
 
 L.tip22 = "The Health Station records a DNA sample of everyone who uses it. Detectives can use this with the DNA Scanner to find out who has been healing up."
 
@@ -600,7 +662,7 @@ L.tip31 = "As Spectator, press {duckkey} to unlock your mouse cursor and click t
 
 L.tip32 = "The Crowbar's secondary fire will push other players."
 
-L.tip33 = "Firing through the ironsights of a weapon or crouching will slightly increase your accuracy and decrease recoil."
+L.tip33 = "Firing through the ironsights of a weapon will slightly increase your accuracy and decrease recoil. Crouching does not."
 
 L.tip34 = "Smoke grenades are effective indoors, especially for creating confusion in crowded rooms."
 
@@ -615,7 +677,6 @@ L.tip38 = "Many of the placeable equipment items (such as C4, Radio) can be stuc
 L.tip39 = "C4 that explodes due to a mistake in disarming it has a smaller explosion than C4 that reaches zero on its timer."
 
 L.tip40 = "If it says 'HASTE MODE' above the round timer, the round will at first be only a few minutes long, but with every death the available time increases (like capturing a point in TF2). This mode puts the pressure on the traitors to keep things moving."
-
 
 --- Round report
 
@@ -911,7 +972,7 @@ L.aw_tod2_text  = "died right after the start of the round."
 
 
 --- New and modified pieces of text are placed below this point, marked with the
---- version in which they were added, to make updating translations easier.
+--- version or the date in which they were added, to make updating translations easier.
 
 
 --- v23
@@ -925,10 +986,10 @@ L.drop_no_ammo = "Insufficient ammo in your weapon's clip to drop as an ammo box
 L.set_cross_brightness = "Crosshair brightness"
 L.set_cross_size = "Crosshair size"
 
---- 5-25-15
+--- 2015-05-25
 L.hat_retrieve = "You picked up a Detective's hat."
 
---- 3-9-2017
+--- 2017-03-09
 L.sb_sortby = "Sort By:"
 
 --- 2018-07-24
@@ -948,6 +1009,12 @@ L.binoc_zoom_level = "LEVEL"
 L.binoc_body = "BODY DETECTED"
 
 L.idle_popup_title = "Idle"
+
+--- 2021-06-07
+L.sb_playervolume = "Player Volume"
+
+--- 2021-09-22
+L.tip41 = "You can adjust a player's microphone volume by right-clicking their mute icon in the scoreboard."
 
 -- INTERLOPER --
 
@@ -1070,28 +1137,26 @@ Protects your chest against bullet damage.
 Can withstand 30 damage before breaking.
 Cannot be stacked.]]
 
-L.item_armor      = "Body Armor"
+L.item_armor      = "Armour + Helmet"
 L.item_armor_desc = [[
-Reduces bullet damage by 30% when
-you get hit.
+Protects your body and head against bullet damage.
 
-Default equipment for Detectives.]]
+Can withstand 30 damage before breaking.
+Cannot be rebought.]]
 
 L.item_radar      = "Radar"
 L.item_radar_desc = [[
 Allows you to scan for life signs.
 
-Starts automatic scans as soon as you
-buy it. Configure it in Radar tab of this
-menu.]]
+Starts automatic scans as soon as you buy it.
+Configure it in Radar tab of this menu.]]
 
 L.item_disg       = "Disguiser"
 L.item_disg_desc  = [[
-Hides your ID info while on. Also avoids
-being the person last seen by a victim.
+Hides your ID info while on.
+Also avoids being the person last seen by a victim.
 
-Toggle in the Disguise tab of this menu
-or press Numpad Enter.]]
+Toggle in the Disguise tab of this menu or press Numpad Enter.]]
 
 -- Bait & Switch
 L.baitswitch_name = "Bait and Switch"
@@ -1106,27 +1171,23 @@ L.baitswitch_broken    = "Your Bait & Switch has been destroyed!"
 -- Binoculars
 L.binoc_name      = "Thermal Binoculars"
 L.binoc_desc      = [[
-Zoom in on corpses and identify them
-from a long distance away.
+Zoom in on corpses and identify them from a long distance away.
 
-Corpses show up through walls when
-you are far away from them.]]
+Corpses show up through walls when you are far away from them.]]
 
 -- China Lake
 L.chinalake_name = "China Lake"
 L.chinalake_desc = [[
 An incendiary grenade launcher.
 
-Fires grenades that detonate upon
-impacting the ground.]]
+Fires grenades that detonate upon impacting the ground.]]
 
 -- Cloaking Device
 L.cloak_name = "Cloaking Device"
 L.cloak_desc = [[
 Hold to become nearly invisible.
 
-Doesn't hide your name, shadow or
-bloodstains on your body.]]
+Doesn't hide your name, shadow or bloodstains on your body.]]
 
 -- Gatekeeper
 L.gatekeeper_name = "MAP-APS Gatekeeper"
@@ -1179,9 +1240,7 @@ Leg hits are non-lethal.]]
 L.m134_name = "M134 Death Machine"
 L.parmour_name = "Power Armour"
 L.parmour_desc = [[
-Gain 50 Level 3 armour and a M134 Death Machine...
-
-But you are announced as a traitor to everyone!]]
+Gain 50 Level 3 armour and a M134 Death Machine, but you are announced as a traitor to everyone!]]
 
 -- Knife
 L.knife_name      = "Knife"
@@ -1206,20 +1265,17 @@ L.mimic_name      = "Mimic-Morph"
 L.mimic_desc      = [[
 Mark a prop to turn it into a proximity mimic.
 
-The size of the prop will determine the
-hostile spawned once triggered.]]
+The size of the prop will determine the hostile spawned once triggered.]]
 
 -- Beenade
 L.beenade_name = "Beenade"
 L.beenade_desc      = [[
-Once detonated, releases a swarm of hostile bees
-that attack any player close enough to them.]]
+Once detonated, releases a swarm of hostile bees that attack any player close enough to them.]]
 
 -- Holy Hand Grenade
 L.holynade_name = "Holy Hand Grenade"
 L.holynade_desc      = [[
-A powerful room-clearing grenade that announces
-it's presence.
+A powerful room-clearing grenade that announces it's presence.
 
 Spread the message of god, one body at a time.]]
 
@@ -1228,20 +1284,17 @@ Spread the message of god, one body at a time.]]
 L.newton_name     = "Newton Launcher"
 
 L.newton_desc     = [[
-Either push people from a safe distance,
-or scatter multiple people up close.
+Either push people from a safe distance, or scatter multiple people up close.
 
 Infinite ammo, but slow to fire.]]
 
 -- Flare gun
 L.flare_name      = "P2A1 Flare Gun"
 L.flare_desc      = [[
-Can be used to burn corpses or people
-so that they are never found.
+Can be used to burn corpses or people so that they are never found.
 Limited ammo.
 
-Burning a corpse makes a distinct
-sound.]]
+Burning a corpse makes a distinct sound.]]
 
 -- Plate Pack
 L.plates_name      = "Plate Pack"
@@ -1253,11 +1306,9 @@ Can be picked up, but can't refill your armour from it.]]
 -- Poltergeist
 L.polter_name = "Poltergeist"
 L.polter_desc = [[
-Plants thumpers on objects to shove them around
-violently and damage people in close proximity.
+Plants thumpers on objects to shove them around violently and damage people in close proximity.
 
-Can also plant thumpers on people to launch them
-into the air upon final explosion.]]
+Can also plant thumpers on people to launch them into the air upon final explosion.]]
 
 -- Dead Ringer
 L.ringer_name = "Dead Ringer"
@@ -1265,15 +1316,12 @@ L.ringer_desc = [[
 Fake your death!
 
 Click to toggle on or off.
-Taking damage while enabled will spawn a corpse
-and cloak you for 15 seconds.]]
+Taking damage while enabled will spawn a corpse and cloak you for 15 seconds.]]
 
 -- RSB
 L.rsb_name = "Remote Sticky Bomb"
 L.rsb_desc = [[
-Plant a bomb on other players or corpses,
-then charge the device,
-and finally detonate to cause a large explosion.]]
+Plant a bomb on other players or corpses, then charge the device, and finally detonate to cause a large explosion.]]
 
 -- Ballistic Shield
 L.shield_name = "Ballistic Shield"
@@ -1285,8 +1333,7 @@ Can bash targets that are close enough.]]
 -- SLAM
 L.slam_name = "M4 SLAM"
 L.slam_desc = [[
-Can be either thrown and detonated,
-or placed on walls to become a tripmine.
+Can be either thrown and detonated, or placed on walls to become a tripmine.
 
 Can be shot and detonated by any player.]]
 
@@ -1308,19 +1355,18 @@ Shows the view of the player shot.]]
 -- SplitShot
 L.stalkit_name = "SplitShot"
 L.stalkit_desc = [[
-If you can find an innocent you trust,
-use this to give them and yourself 150 health.
+If you can find an innocent you trust, use this to give them and yourself 150 health.
 
 This will be announced to everyone in chat.]]
 
 -- Suppressor
 L.suppressor_name = "Suppressor"
 L.suppressor_desc = [[
-Reduce the audible range of your weapons.
-Primary - Suppress primary weapon.
-Secondary - Suppress secondary weapon.
+Attach to a weapon to reduce its audible range and prevent near miss indicators from showing.
+Can't be used on the M99 or M134.
 
-Can't suppress most power weapons.]]
+Primary - Suppress primary weapon.
+Secondary - Suppress secondary weapon.]]
 
 -- Teleporter
 L.tele_name       = "Teleporter"
@@ -1328,8 +1374,7 @@ L.tele_name       = "Teleporter"
 L.tele_desc       = [[
 Teleport to a previously marked spot.
 
-Teleporting makes noise, and the
-number of uses is limited.]]
+Teleporting makes noise.]]
 
 -- Visualizer
 L.vis_name        = "Visualizer"
@@ -1338,6 +1383,4 @@ L.vis_hint        = "Press {usekey} to pick up (Detectives only)."
 L.vis_desc        = [[
 Crime scene visualization device.
 
-Analyzes a corpse to show how
-the victim was killed, but only if
-they died of gunshot wounds.]]
+Analyzes a corpse to show how the victim was killed, but only if they died of gunshot wounds.]]
